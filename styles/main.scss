@@ -1,0 +1,39 @@
+/* reset */
+@import 'reset';
+
+/* box sizing */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Title */
+  h1{
+    margin: 5px 0;
+    font-size: 200%;
+    text-align: center;
+  }
+
+/* Game Area */
+  #game-area{
+    display: grid;
+    grid-template-columns: 600px 600px 600px;
+    grid-column-gap: 20px;
+    margin: auto;
+  }
+
+/* Game Grid */
+  .game-grid {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+  #game-grid-0 {}
+  #game-grid-1 {}
+  #game-grid-2 {}
+
+/* Grid Squares */
+  .square {
+    border: 1px solid black;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+  }
