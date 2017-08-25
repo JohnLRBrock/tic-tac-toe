@@ -87,6 +87,7 @@ body {
   .deactivated {
     -webkit-filter: blur(5px);
     filter: blur(5px);
+    .square { cursor: default; }
     .square:hover {
     -webkit-filter: opacity(1);
     filter: opacity(1); }
