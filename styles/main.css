@@ -1,4 +1,4 @@
-/* reset */
+/* Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -36,12 +36,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* box sizing */
+/* Add color Variables */
+/* Box Sizing */
 *, *:before, *:after {
   box-sizing: border-box; }
 
+/* Body */
+body {
+  background-color: #3498DB;
+  color: #2C3E50; }
+
 /* Title */
 h1 {
+  font-family: 'Lato', sans-serif;
   margin: 5px 0;
   font-size: 200%;
   text-align: center; }
@@ -50,19 +57,41 @@ h1 {
 #game-area {
   display: grid;
   grid-template-columns: 600px 600px 600px;
-  grid-column-gap: 20px;
-  margin: auto; }
+  grid-column-gap: 20px; }
 
 /* Game Grid */
 .game-grid {
   display: grid;
-  grid-template-columns: 200px 200px 200px; }
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 4px; }
 
 /* Grid Squares */
 .square {
-  border: 1px solid black;
-  background-color: green;
+  background-color: #ECF0F1;
   height: 200px;
-  width: 200px; }
+  width: 200px;
+  font-size: 1000%;
+  text-align: center; }
+
+.square:hover {
+  -webkit-filter: opacity(0.2);
+  filter: opacity(0.2); }
+
+.player1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #2980B9; }
+
+.player2 {
+  font-family: 'Sriracha', cursive;
+  color: #E74C3C; }
+
+.player1:hover, .player2:hover {
+  -webkit-filter: opacity(1);
+  filter: opacity(1); }
+
+/* Other Game Stuffs */
+.deactivated {
+  -webkit-filter: blur(5px);
+  filter: blur(5px); }
 
 /*# sourceMappingURL=main.css.map */
