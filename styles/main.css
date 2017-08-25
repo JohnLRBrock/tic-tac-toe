@@ -97,4 +97,9 @@ h1 {
     -webkit-filter: opacity(1);
     filter: opacity(1); }
 
+#rules {
+  margin: auto;
+  width: 33%;
+  font-size: 175%; }
+
 /*# sourceMappingURL=main.css.map */
