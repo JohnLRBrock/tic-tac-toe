@@ -62,14 +62,14 @@ h1 {
 /* Game Grid */
 .game-grid {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 30% 30% 30%;
   grid-gap: 4px; }
 
 /* Grid Squares */
 .square {
   background-color: #ECF0F1;
   height: 200px;
-  width: 200px;
+  width: 100%;
   font-size: 1000%;
   text-align: center; }
 
