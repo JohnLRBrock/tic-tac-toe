@@ -116,8 +116,8 @@ const whichSquare = function whichSquare(event) {
   const id = event.target.id;
   return id[2];
 };
-const gameOver = function gameOver() {
-  console.log('game over');
+const gameOver = function gameOver(currentPlayer) {
+  $('#victor').html(currentPlayer + ' Wins!');
 };
 
 $(document).ready(() => {
@@ -132,7 +132,7 @@ $(document).ready(() => {
       if (game.isThreeInRow(boardID)) {
         $(`#game-grid-${boardID}`).addClass('deactivated');
         if (game.deactivedBoards > 2) {
-          gameOver();
+          gameOver(game.currentPlayer);
         }
       }
     }

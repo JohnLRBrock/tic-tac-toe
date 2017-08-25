@@ -93,5 +93,8 @@ h1 {
 .deactivated {
   -webkit-filter: blur(5px);
   filter: blur(5px); }
+  .deactivated .square:hover {
+    -webkit-filter: opacity(1);
+    filter: opacity(1); }
 
 /*# sourceMappingURL=main.css.map */
