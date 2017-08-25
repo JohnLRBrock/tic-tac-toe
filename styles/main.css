@@ -57,7 +57,16 @@ h1 {
 #game-area {
   display: grid;
   grid-template-columns: 600px 600px 600px;
-  grid-column-gap: 20px; }
+  grid-column-gap: 20px;
+  -webkit-user-select: none;
+  /* Safari, iOS, and Android */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */ }
 
 /* Game Grid */
 .game-grid {
@@ -71,7 +80,8 @@ h1 {
   height: 200px;
   width: 100%;
   font-size: 1000%;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 .square:hover {
   -webkit-filter: opacity(0.2);
@@ -84,6 +94,9 @@ h1 {
 .player2 {
   font-family: 'Sriracha', cursive;
   color: #E74C3C; }
+
+.player1, .player2 {
+  cursor: default; }
 
 .player1:hover, .player2:hover {
   -webkit-filter: opacity(1);

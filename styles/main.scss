@@ -33,6 +33,11 @@ body {
     display: grid;
     grid-template-columns: 600px 600px 600px;
     grid-column-gap: 20px;
+    -webkit-user-select: none; /* Safari, iOS, and Android */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
   }
 
 /* Game Grid */
@@ -52,6 +57,7 @@ body {
     width: 100%;
     font-size: 1000%;
     text-align: center;
+    cursor: pointer;
   }
 
   .square:hover {
@@ -67,6 +73,10 @@ body {
   .player2 {
     font-family: 'Sriracha', cursive;
     color: $player2;
+  }
+
+  .player1, .player2 {
+    cursor: default;
   }
 
   .player1:hover, .player2:hover {
