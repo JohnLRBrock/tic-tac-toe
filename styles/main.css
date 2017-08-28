@@ -37,6 +37,7 @@ table {
   border-spacing: 0; }
 
 /* Add color Variables */
+/* Sizing variables */
 /* Box Sizing */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -54,11 +55,12 @@ h1 {
   text-align: center; }
 
 /* Game Area */
+/* Contains the three boards */
 #game-area {
-  margin: auto;
-  width: 80%;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-gap: 4vw;
+  margin: 0 4vw;
+  grid-template-columns: 28vw 28vw 28vw;
   -webkit-user-select: none;
   /* Safari, iOS, and Android */
   -moz-user-select: none;
@@ -70,16 +72,18 @@ h1 {
      supported by Chrome and Opera */ }
 
 /* Game Grid */
+/* Each individual game board */
 .game-grid {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-gap: 4px; }
+  grid-template-columns: 8vw 8vw 8vw;
+  grid-gap: 1vw;
+  margin: 0 1vw; }
 
 /* Grid Squares */
 .square {
   background-color: #ECF0F1;
-  height: 7vw;
-  width: 7vw;
+  height: 8vw;
+  width: 8vw;
   font-size: 800%;
   text-align: center;
   cursor: pointer; }
@@ -88,6 +92,7 @@ h1 {
   -webkit-filter: opacity(0.2);
   filter: opacity(0.2); }
 
+/* Squares marked by players */
 .player1 {
   font-family: 'Permanent Marker', cursive;
   color: #2980B9; }

@@ -9,6 +9,15 @@ $player1: $mid-blue;
 $player2: $red;
 $text: $dark-blue;
 
+/* Sizing variables */
+$game-board: 28vw;
+$square: 8vw;
+// includes outside gutters
+$board-gutter: 4vw;
+// no outside gutters
+$square-gutter: 1vw;
+
+
 /* Box Sizing */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -29,34 +38,31 @@ body {
   }
 
 /* Game Area */
+/* Contains the three boards */
   #game-area{
-    margin: auto;
-    width: 80%;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    // grid-column-gap: 20px;
+    grid-gap: $board-gutter;
+    margin: 0 $board-gutter;
+    grid-template-columns: $game-board $game-board $game-board;
     -webkit-user-select: none; /* Safari, iOS, and Android */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none; /* Non-prefixed version, currently
                               supported by Chrome and Opera */
   }
-
 /* Game Grid */
+/* Each individual game board */
   .game-grid {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 4px;
+    grid-template-columns: $square $square $square;
+    grid-gap: $square-gutter;
+    margin: 0 $square-gutter;
   }
-  #game-grid-0 {}
-  #game-grid-1 {}
-  #game-grid-2 {}
-
 /* Grid Squares */
   .square {
     background-color: $grid-color;
-    height: 7vw;
-    width: 7vw;
+    height: $square;
+    width: $square;
     font-size: 800%;
     text-align: center;
     cursor: pointer;
@@ -67,6 +73,7 @@ body {
     filter: opacity(.2);
   }
 
+/* Squares marked by players */
   .player1 {
     font-family: 'Permanent Marker', cursive;
     color: $player1;
@@ -85,6 +92,7 @@ body {
     -webkit-filter: opacity(1);
     filter: opacity(1);
   }
+
 /* Other Game Stuffs */
   .deactivated {
     -webkit-filter: blur(5px);
