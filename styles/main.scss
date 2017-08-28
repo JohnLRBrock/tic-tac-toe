@@ -98,10 +98,14 @@ body {
     filter: opacity(1);
   }
 
+/* filters */
+$brightness:0.5;
+$grayscale: 40%;
+
 /* Other Game Stuffs */
   .deactivated {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: brightness($brightness) grayscale($grayscale);
+    filter: brightness($brightness) grayscale($grayscale);
     .square { cursor: default; }
     .square:hover {
     -webkit-filter: opacity(1);

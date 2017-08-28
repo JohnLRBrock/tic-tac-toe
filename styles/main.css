@@ -112,10 +112,11 @@ h1 {
   -webkit-filter: opacity(1);
   filter: opacity(1); }
 
+/* filters */
 /* Other Game Stuffs */
 .deactivated {
-  -webkit-filter: blur(5px);
-  filter: blur(5px); }
+  -webkit-filter: brightness(0.5) grayscale(40%);
+  filter: brightness(0.5) grayscale(40%); }
   .deactivated .square {
     cursor: default; }
   .deactivated .square:hover {
