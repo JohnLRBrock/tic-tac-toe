@@ -96,6 +96,14 @@ $grayscale: 40%;
     width: 80%;
     strong { font-weight: bold;}
   }
+  footer { text-align: center; }
+  footer a { 
+    color: $text;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
 
 /* Media Queries for Different Screen Sizes */
 
@@ -125,6 +133,10 @@ $grayscale: 40%;
     text-align: left;
     width: 85%;
   }
+  footer a{
+    font-size: $phone-only-medium-text;
+    margin: 0 $phone-only-board-gap;
+  }
 }
 /* tablet-portrait-only */
 @media only screen and (min-width: 600px) and (max-width: 899px) {
@@ -143,8 +155,10 @@ $grayscale: 40%;
     font-size: $tablet-portrait-only-x-font-size;
   }
   h1 { font-size: $tablet-portrait-only-large-text; }
-  #rules {
+  #rules { font-size: $tablet-portrait-only-medium-text; }
+  footer a{
     font-size: $tablet-portrait-only-medium-text;
+    margin: 0 $tablet-portrait-only-board-margin;
   }
 }
 /* tablet-landscape-only */
@@ -164,22 +178,21 @@ $grayscale: 40%;
     font-size: $tablet-landscape-only-x-font-size;
   }
   h1 { font-size: $tablet-landscape-only-large-text; }
-  #rules {
+  #rules { font-size: $tablet-landscape-only-medium-text; }
+  footer a{
     font-size: $tablet-landscape-only-medium-text;
+    margin: 0 $tablet-landscape-only-board-margin;
   }
 }
 /* desktop-only */
 @media only screen and (min-width: 1200px) and (max-width: 1799px) {
   #game-area{
-    // grid-gap: $desktop-only-board-gutter;
-    // margin: 0 $desktop-only-board-gutter;
     grid-template-columns: repeat(3, $desktop-only-game-board);
     margin: 0 $desktop-only-board-margin;
   }
   .game-grid {
     grid-template-columns: repeat(3, $desktop-only-square);
     grid-gap: $desktop-only-square-gutter;
-    // margin: 0 $desktop-only-square-gutter;
   }
   .square {
     height: $desktop-only-square;
@@ -187,15 +200,17 @@ $grayscale: 40%;
     font-size: $desktop-only-x-font-size;
   }
   h1 { font-size: $desktop-only-large-text; }
-  #rules {
+  #rules { font-size: $desktop-only-medium-text; }
+  footer a{
     font-size: $desktop-only-medium-text;
+    margin: 0 $desktop-only-board-margin;
   }
 } 
 /* big-desktop-up */
 @media (min-width: 1800px) {
   #game-area{
     grid-template-columns: repeat(3, $big-desktop-up-game-board);
-    margin: 0 $big-desktop-up-game-board-margin;
+    margin: 0 $big-desktop-up-board-margin;
   }
   .game-grid {
     grid-template-columns: repeat(3, $big-desktop-up-square);
@@ -207,7 +222,9 @@ $grayscale: 40%;
     font-size: $big-desktop-up-x-font-size;
   }
   h1 { font-size: $big-desktop-up-large-text; }
-  #rules {
+  #rules { font-size: $big-desktop-up-medium-text; }
+  footer a{
     font-size: $big-desktop-up-medium-text;
+    margin: 0 $big-desktop-up-board-margin;
   }
 }
