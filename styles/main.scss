@@ -135,7 +135,11 @@ footer a:hover {
     text-align: left;
     width: 85%;
   }
-  #turn-indicator { font-size: $phone-only-large-text / 1.5; }
+  #turn-indicator {
+    font-size: $phone-only-large-text / 1.5;
+    line-height: 40px;
+    height: 40px;
+  }
   footer a{
     font-size: $phone-only-medium-text;
     margin: 0 $phone-only-board-gap;
@@ -159,7 +163,11 @@ footer a:hover {
   }
   h1 { font-size: $tablet-portrait-only-large-text; }
   #rules { font-size: $tablet-portrait-only-medium-text; }
-  #turn-indicator { font-size: $tablet-portrait-only-large-text / 1.5; }
+  #turn-indicator {
+    font-size: $tablet-portrait-only-large-text / 1.5;
+    line-height: 60px;
+    height: 60px;
+  }
   footer a{
     font-size: $tablet-portrait-only-medium-text;
     margin: 0 $tablet-portrait-only-board-margin;
@@ -183,7 +191,11 @@ footer a:hover {
   }
   h1 { font-size: $tablet-landscape-only-large-text; }
   #rules { font-size: $tablet-landscape-only-medium-text; }
-  #turn-indicator { font-size: $tablet-landscape-only-large-text / 1.5; }
+  #turn-indicator {
+    font-size: $tablet-landscape-only-large-text / 1.5;
+    line-height: 90px;
+    height: 90px;
+  }
   footer a{
     font-size: $tablet-landscape-only-medium-text;
     margin: 0 $tablet-landscape-only-board-margin;
@@ -206,7 +218,11 @@ footer a:hover {
   }
   h1 { font-size: $desktop-only-large-text; }
   #rules { font-size: $desktop-only-medium-text; }
-  #turn-indicator { font-size: $desktop-only-large-text / 1.5; }
+  #turn-indicator { 
+    font-size: $desktop-only-large-text / 1.5;
+    height: 100px;
+    line-height: 100px;
+  }
   footer a{
     font-size: $desktop-only-medium-text;
     margin: 0 $desktop-only-board-margin;
@@ -229,7 +245,11 @@ footer a:hover {
   }
   h1 { font-size: $big-desktop-up-large-text; }
   #rules { font-size: $big-desktop-up-medium-text; }
-  #turn-indicator { font-size: $big-desktop-up-large-text / 1.5; }
+  #turn-indicator {
+    font-size: $big-desktop-up-large-text / 1.5;
+    height: 100px;
+    line-height: 100px;
+  }
   footer a{
     font-size: $big-desktop-up-medium-text;
     margin: 0 $big-desktop-up-board-margin;
