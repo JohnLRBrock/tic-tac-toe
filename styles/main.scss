@@ -83,6 +83,8 @@ $grayscale: 40%;
 
 /* Other Game Stuffs */
   .deactivated {
+    -webkit-transition: filter .28s ease;
+    transition: filter .28s ease;
     -webkit-filter: brightness($brightness) grayscale($grayscale);
     filter: brightness($brightness) grayscale($grayscale);
     .square { cursor: default; }

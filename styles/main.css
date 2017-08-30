@@ -117,6 +117,8 @@ h1 {
 /* filters */
 /* Other Game Stuffs */
 .deactivated {
+  -webkit-transition: filter 0.28s ease;
+  transition: filter 0.28s ease;
   -webkit-filter: brightness(0.5) grayscale(40%);
   filter: brightness(0.5) grayscale(40%); }
   .deactivated .square {
