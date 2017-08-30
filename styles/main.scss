@@ -100,7 +100,10 @@ $grayscale: 40%;
   width: 80%;
   strong { font-weight: bold; }
 }
-footer { text-align: center; }
+footer {
+  margin: 5px 0 0 0;
+  text-align: center;
+}
 footer a { 
   color: $neutral;
   text-decoration: none;
