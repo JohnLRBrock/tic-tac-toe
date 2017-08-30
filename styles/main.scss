@@ -24,90 +24,90 @@ body {
 }
 
 /* Title */
-  h1 {
-    font-family: 'Lato', sans-serif;
-    margin: 5px 0;
-    font-size: $phone-only-large-text;
-    text-align: center;
-  }
+h1 {
+  font-family: 'Lato', sans-serif;
+  margin: 5px 0;
+  font-size: $phone-only-large-text;
+  text-align: center;
+}
 /* Game Area */
 /* Contains the three boards */
-  #game-area{
-    display: grid;
-    justify-content: space-between;
-    -webkit-user-select: none; /* Safari, iOS, and Android */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently
-                              supported by Chrome and Opera */
-  }
+#game-area{
+  display: grid;
+  justify-content: space-between;
+  -webkit-user-select: none; /* Safari, iOS, and Android */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome and Opera */
+}
 /* Game Grid */
 /* Each individual game board */
-  .game-grid {
-    display: grid;
-    align-items: center;
-  }
+.game-grid {
+  display: grid;
+  align-items: center;
+}
 /* Grid Squares */
-  .square {
-    background-color: $grid-color;
-    text-align: center;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
-  }
+.square {
+  background-color: $grid-color;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
+}
 
-  .square:hover {
-    -webkit-transition: filter .1s ease;
-    transition: filter .1s ease;
-    -webkit-filter: opacity(.2);
-    filter: opacity(.2);
-  }
+.square:hover {
+  -webkit-transition: filter .1s ease;
+  transition: filter .1s ease;
+  -webkit-filter: opacity(.2);
+  filter: opacity(.2);
+}
 /* Squares marked by players */
-  .player1 {
-    font-family: 'Permanent Marker', cursive;
-    color: $player1;
-  }
-  .player2 {
-    font-family: 'Sriracha', cursive;
-    color: $player2;
-  }
+.player1, .player2{
+  font-family: 'Permanent Marker', cursive;
+  color: $dark-blue;
+}
+// .player2 {
+//   font-family: 'Sriracha', cursive;
+//   color: $player2;
+// }
 
-  .player1, .player2 { cursor: default; }
-  .player1:hover, .player2:hover {
-    -webkit-filter: opacity(1);
-    filter: opacity(1);
-  }
+.player1, .player2 { cursor: default; }
+.player1:hover, .player2:hover {
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
+}
 
 /* filters */
 $brightness:0.5;
 $grayscale: 40%;
 
 /* Other Game Stuffs */
-  .deactivated {
-    -webkit-transition: filter .28s ease;
-    transition: filter .28s ease;
-    -webkit-filter: brightness($brightness) grayscale($grayscale);
-    filter: brightness($brightness) grayscale($grayscale);
-    .square { cursor: default; }
-    .square:hover {
-    -webkit-filter: opacity(1);
-    filter: opacity(1); }
-  }
-  #rules {
-    list-style-type: square;
-    margin: 2px auto 10px auto;
-    width: 80%;
-    strong { font-weight: bold; }
-  }
-  footer { text-align: center; }
-  footer a { 
-    color: $neutral;
-    text-decoration: none;
-  }
-  footer a:hover {
-    text-decoration: underline;
-  }
+.deactivated {
+  -webkit-transition: filter .28s ease;
+  transition: filter .28s ease;
+  -webkit-filter: brightness($brightness) grayscale($grayscale);
+  filter: brightness($brightness) grayscale($grayscale);
+  .square { cursor: default; }
+  .square:hover {
+  -webkit-filter: opacity(1);
+  filter: opacity(1); }
+}
+#rules {
+  list-style: decimal; 
+  margin: 2px auto 10px auto;
+  width: 80%;
+  strong { font-weight: bold; }
+}
+footer { text-align: center; }
+footer a { 
+  color: $neutral;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 
 /* Media Queries for Different Screen Sizes */
 
@@ -137,6 +137,7 @@ $grayscale: 40%;
     text-align: left;
     width: 85%;
   }
+  #turn-indicator { font-size: $phone-only-large-text / 1.5; }
   footer a{
     font-size: $phone-only-medium-text;
     margin: 0 $phone-only-board-gap;
@@ -160,6 +161,7 @@ $grayscale: 40%;
   }
   h1 { font-size: $tablet-portrait-only-large-text; }
   #rules { font-size: $tablet-portrait-only-medium-text; }
+  #turn-indicator { font-size: $tablet-portrait-only-large-text / 1.5; }
   footer a{
     font-size: $tablet-portrait-only-medium-text;
     margin: 0 $tablet-portrait-only-board-margin;
@@ -183,6 +185,7 @@ $grayscale: 40%;
   }
   h1 { font-size: $tablet-landscape-only-large-text; }
   #rules { font-size: $tablet-landscape-only-medium-text; }
+  #turn-indicator { font-size: $tablet-landscape-only-large-text / 1.5; }
   footer a{
     font-size: $tablet-landscape-only-medium-text;
     margin: 0 $tablet-landscape-only-board-margin;
@@ -205,6 +208,7 @@ $grayscale: 40%;
   }
   h1 { font-size: $desktop-only-large-text; }
   #rules { font-size: $desktop-only-medium-text; }
+  #turn-indicator { font-size: $desktop-only-large-text / 1.5; }
   footer a{
     font-size: $desktop-only-medium-text;
     margin: 0 $desktop-only-board-margin;
@@ -227,6 +231,7 @@ $grayscale: 40%;
   }
   h1 { font-size: $big-desktop-up-large-text; }
   #rules { font-size: $big-desktop-up-medium-text; }
+  #turn-indicator { font-size: $big-desktop-up-large-text / 1.5; }
   footer a{
     font-size: $big-desktop-up-medium-text;
     margin: 0 $big-desktop-up-board-margin;

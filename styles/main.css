@@ -101,13 +101,9 @@ h1 {
   filter: opacity(0.2); }
 
 /* Squares marked by players */
-.player1 {
+.player1, .player2 {
   font-family: 'Permanent Marker', cursive;
-  color: #2980B9; }
-
-.player2 {
-  font-family: 'Sriracha', cursive;
-  color: #E74C3C; }
+  color: #2C3E50; }
 
 .player1, .player2 {
   cursor: default; }
@@ -130,7 +126,7 @@ h1 {
     filter: opacity(1); }
 
 #rules {
-  list-style-type: square;
+  list-style: decimal;
   margin: 2px auto 10px auto;
   width: 80%; }
   #rules strong {
@@ -173,6 +169,9 @@ footer a:hover {
     text-align: left;
     width: 85%; }
 
+  #turn-indicator {
+    font-size: 26.6666666667px; }
+
   footer a {
     font-size: 18px;
     margin: 0 50px; } }
@@ -197,6 +196,9 @@ footer a:hover {
 
   #rules {
     font-size: 22px; }
+
+  #turn-indicator {
+    font-size: 40px; }
 
   footer a {
     font-size: 22px;
@@ -223,6 +225,9 @@ footer a:hover {
   #rules {
     font-size: 21px; }
 
+  #turn-indicator {
+    font-size: 60px; }
+
   footer a {
     font-size: 21px;
     margin: 0 25px; } }
@@ -247,6 +252,9 @@ footer a:hover {
   #rules {
     font-size: 23px; }
 
+  #turn-indicator {
+    font-size: 66.6666666667px; }
+
   footer a {
     font-size: 23px;
     margin: 0 25px; } }
@@ -270,6 +278,9 @@ footer a:hover {
 
   #rules {
     font-size: 35px; }
+
+  #turn-indicator {
+    font-size: 66.6666666667px; }
 
   footer a {
     font-size: 35px;

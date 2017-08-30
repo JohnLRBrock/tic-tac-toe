@@ -78,6 +78,11 @@ function Game() {
 
   this.togglePlayer = function togglePlayer() {
     this.currentPlayer = this.currentPlayer === 'player1' ? 'player2' : 'player1';
+    if (this.currentPlayer === 'player1') {
+      $('#turn-indicator').html("First Player's Turn");
+    } else {
+      $('#turn-indicator').html("Second Player's Turn");      
+    }
   };
   this.makeMove = function makeGameMove(board, square) {
     if (this.boards[board].makeMove(square, this.currentPlayer)) {
