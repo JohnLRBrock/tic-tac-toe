@@ -95,6 +95,8 @@ h1 {
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3); }
 
 .square:hover {
+  -webkit-transition: filter .1s ease;
+  transition: filter .1s ease;
   -webkit-filter: opacity(0.2);
   filter: opacity(0.2); }
 
@@ -117,8 +119,8 @@ h1 {
 /* filters */
 /* Other Game Stuffs */
 .deactivated {
-  -webkit-transition: filter 0.28s ease;
-  transition: filter 0.28s ease;
+  -webkit-transition: filter .28s ease;
+  transition: filter .28s ease;
   -webkit-filter: brightness(0.5) grayscale(40%);
   filter: brightness(0.5) grayscale(40%); }
   .deactivated .square {

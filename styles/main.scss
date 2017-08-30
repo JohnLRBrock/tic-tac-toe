@@ -58,6 +58,8 @@ body {
   }
 
   .square:hover {
+    -webkit-transition: filter .1s ease;
+    transition: filter .1s ease;
     -webkit-filter: opacity(.2);
     filter: opacity(.2);
   }
@@ -71,7 +73,7 @@ body {
     color: $player2;
   }
 
-  .player1, .player2 { cursor: default;}
+  .player1, .player2 { cursor: default; }
   .player1:hover, .player2:hover {
     -webkit-filter: opacity(1);
     filter: opacity(1);
@@ -96,7 +98,7 @@ $grayscale: 40%;
     list-style-type: square;
     margin: 2px auto 10px auto;
     width: 80%;
-    strong { font-weight: bold;}
+    strong { font-weight: bold; }
   }
   footer { text-align: center; }
   footer a { 
