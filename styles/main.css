@@ -103,9 +103,7 @@ h1 {
 /* Squares marked by players */
 .player1, .player2 {
   font-family: 'Permanent Marker', cursive;
-  color: #2C3E50; }
-
-.player1, .player2 {
+  color: #2C3E50;
   cursor: default; }
 
 .player1:hover, .player2:hover {

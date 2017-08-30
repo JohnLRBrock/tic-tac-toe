@@ -67,13 +67,8 @@ h1 {
 .player1, .player2{
   font-family: 'Permanent Marker', cursive;
   color: $dark-blue;
+  cursor: default;
 }
-// .player2 {
-//   font-family: 'Sriracha', cursive;
-//   color: $player2;
-// }
-
-.player1, .player2 { cursor: default; }
 .player1:hover, .player2:hover {
   -webkit-filter: opacity(1);
   filter: opacity(1);
