@@ -117,7 +117,11 @@ const whichSquare = function whichSquare(event) {
   return id[2];
 };
 const gameOver = function gameOver(currentPlayer) {
-  $('#victor').html(currentPlayer + ' Wins!');
+  if (currentPlayer === 'player1') {
+    $('#victor').html('First Player Wins!');
+  } else {
+    $('#victor').html('Second Player Wins!');
+  }
 };
 
 $(document).ready(() => {
