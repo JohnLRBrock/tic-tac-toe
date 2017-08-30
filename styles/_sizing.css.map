@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iCAAiC;AAOjC,2BAA2B;AAK3B,2CAA2C;AAM3C,qCAAqC;AAKrC,4CAA4C;AAM5C,sCAAsC;AAKtC,uCAAuC;AAOvC,iCAAiC;AAKjC,qCAAqC;AAMrC,+BAA+B",
+"sources": ["_sizing.scss"],
+"names": [],
+"file": "_sizing.css"
+}

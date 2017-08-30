@@ -36,9 +36,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* Add color Variables */
-/* Sizing variables */
-/* Text sizes */
+/* Add Color Variables */
+/* Add Sizing Variables */
+/* Phone-Only Sizing Variables */
+/* Phone-Only Text sizes */
+/* Tablet-Portrait-Only Sizing Variables */
+/* Tablet-Portrait-Only Text sizes */
+/* Tablet-Landscape-Only Sizing Variables */
+/* Tablet-Landscape-Only Text sizes */
+/* For-Desktop-Only Sizing Variables */
+/* For-Desktop-Only Text sizes */
+/* Big-Desktop-Up Sizing Variables */
+/* Big-Desktop-Up Text sizes */
 /* Box Sizing */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -52,16 +61,14 @@ body {
 h1 {
   font-family: 'Lato', sans-serif;
   margin: 5px 0;
-  font-size: 8vh;
+  font-size: 40px;
   text-align: center; }
 
 /* Game Area */
 /* Contains the three boards */
 #game-area {
   display: grid;
-  grid-gap: 4vw;
-  margin: 0 4vw;
-  grid-template-columns: 28vw 28vw 28vw;
+  justify-content: space-between;
   -webkit-user-select: none;
   /* Safari, iOS, and Android */
   -moz-user-select: none;
@@ -76,16 +83,11 @@ h1 {
 /* Each individual game board */
 .game-grid {
   display: grid;
-  grid-template-columns: 8vw 8vw 8vw;
-  grid-gap: 1vw;
-  margin: 0 1vw; }
+  align-items: center; }
 
 /* Grid Squares */
 .square {
   background-color: #ECF0F1;
-  height: 8vw;
-  width: 8vw;
-  font-size: 16vh;
   text-align: center;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
@@ -124,8 +126,119 @@ h1 {
     filter: opacity(1); }
 
 #rules {
-  margin: auto;
-  width: 80%;
-  font-size: 6vh; }
+  list-style-type: square;
+  margin: 2px auto 10px auto;
+  width: 80%; }
+  #rules strong {
+    font-weight: bold; }
+
+/* Media Queries for Different Screen Sizes */
+/* phone-only */
+@media only screen and (max-width: 599px) {
+  #game-area {
+    margin: 0 15px;
+    grid-gap: 50px;
+    grid-template-columns: 380px; }
+
+  .game-grid {
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    margin: 0 5px; }
+
+  .square {
+    height: 120px;
+    width: 120px;
+    font-size: 120px; }
+
+  h1 {
+    font-size: 40px;
+    text-align: left; }
+
+  #rules {
+    font-size: 18px;
+    text-align: left;
+    width: 85%; } }
+/* tablet-portrait-only */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #game-area {
+    margin: 0 10px;
+    grid-template-columns: repeat(3, 190px); }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 50px);
+    grid-gap: 10px;
+    margin: 0 10px; }
+
+  .square {
+    height: 50px;
+    width: 50px;
+    font-size: 50px; }
+
+  h1 {
+    font-size: 60px; }
+
+  #rules {
+    font-size: 22px; } }
+/* tablet-landscape-only */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  #game-area {
+    margin: 0 25px;
+    grid-template-columns: repeat(3, 280px); }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+    margin: 0 10px; }
+
+  .square {
+    height: 80px;
+    width: 80px;
+    font-size: 80px; }
+
+  h1 {
+    font-size: 90px; }
+
+  #rules {
+    font-size: 21px; } }
+/* desktop-only */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+  #game-area {
+    grid-template-columns: repeat(3, 360px);
+    margin: 0 25px; }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 110px);
+    grid-gap: 15px; }
+
+  .square {
+    height: 110px;
+    width: 110px;
+    font-size: 110px; }
+
+  h1 {
+    font-size: 100px; }
+
+  #rules {
+    font-size: 23px; } }
+/* big-desktop-up */
+@media (min-width: 1800px) {
+  #game-area {
+    grid-template-columns: repeat(3, 510px);
+    margin: 0 80px; }
+
+  .game-grid {
+    grid-template-columns: repeat(3, 160px);
+    grid-gap: 15px; }
+
+  .square {
+    height: 160px;
+    width: 160px;
+    font-size: 155px; }
+
+  h1 {
+    font-size: 100px; }
+
+  #rules {
+    font-size: 35px; } }
 
 /*# sourceMappingURL=main.css.map */

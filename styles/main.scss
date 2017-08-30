@@ -1,7 +1,7 @@
 /* Reset */
 @import 'reset';
 
-/* Add color Variables */
+/* Add Color Variables */
 @import 'colors';
 $background-color: $light-blue;
 $grid-color: $neutral;
@@ -9,16 +9,8 @@ $player1: $mid-blue;
 $player2: $red;
 $text: $dark-blue;
 
-/* Sizing variables */
-$game-board: 28vw;
-$square: 8vw;
-$board-gutter: 4vw;
-$square-gutter: 1vw;
-
-/* Text sizes */
-$big-ol-text: 8vh;
-$medium-text: 6vh;
-$x-text-size: 16vh;
+/* Add Sizing Variables */
+@import 'sizing';
 
 /* Box Sizing */
 *, *:before, *:after {
@@ -32,20 +24,17 @@ body {
 }
 
 /* Title */
-  h1{
+  h1 {
     font-family: 'Lato', sans-serif;
     margin: 5px 0;
-    font-size: $big-ol-text;
+    font-size: $phone-only-large-text;
     text-align: center;
   }
-
 /* Game Area */
 /* Contains the three boards */
   #game-area{
     display: grid;
-    grid-gap: $board-gutter;
-    margin: 0 $board-gutter;
-    grid-template-columns: $game-board $game-board $game-board;
+    justify-content: space-between;
     -webkit-user-select: none; /* Safari, iOS, and Android */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
@@ -56,16 +45,11 @@ body {
 /* Each individual game board */
   .game-grid {
     display: grid;
-    grid-template-columns: $square $square $square;
-    grid-gap: $square-gutter;
-    margin: 0 $square-gutter;
+    align-items: center;
   }
 /* Grid Squares */
   .square {
     background-color: $grid-color;
-    height: $square;
-    width: $square;
-    font-size: $x-text-size;
     text-align: center;
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
@@ -77,22 +61,17 @@ body {
     -webkit-filter: opacity(.2);
     filter: opacity(.2);
   }
-
 /* Squares marked by players */
   .player1 {
     font-family: 'Permanent Marker', cursive;
     color: $player1;
   }
-
   .player2 {
     font-family: 'Sriracha', cursive;
     color: $player2;
   }
 
-  .player1, .player2 {
-    cursor: default;
-  }
-
+  .player1, .player2 { cursor: default;}
   .player1:hover, .player2:hover {
     -webkit-filter: opacity(1);
     filter: opacity(1);
@@ -112,7 +91,123 @@ $grayscale: 40%;
     filter: opacity(1); }
   }
   #rules {
-    margin: auto;
+    list-style-type: square;
+    margin: 2px auto 10px auto;
     width: 80%;
-    font-size: $medium-text;
+    strong { font-weight: bold;}
   }
+
+/* Media Queries for Different Screen Sizes */
+
+/* phone-only */
+@media only screen and (max-width: 599px) {
+  #game-area{
+    margin: 0 $phone-only-board-margin; 
+    grid-gap: $phone-only-board-gap;
+    grid-template-columns: $phone-only-game-board;
+  }
+  .game-grid {
+    grid-template-columns: auto auto auto;
+    grid-gap: $phone-only-square-gutter;
+    margin: 0 $phone-only-square-gutter;
+  }
+  .square {
+    height: $phone-only-square;
+    width: $phone-only-square;
+    font-size: $phone-only-x-font-size;
+  }
+  h1 {
+    font-size: $phone-only-large-text;
+    text-align: left;
+  }
+  #rules {
+    font-size: $phone-only-medium-text;
+    text-align: left;
+    width: 85%;
+  }
+}
+/* tablet-portrait-only */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #game-area{
+    margin: 0 $tablet-portrait-only-board-margin;
+    grid-template-columns: repeat(3, $tablet-portrait-only-game-board);
+  }
+  .game-grid {
+    grid-template-columns: repeat(3, $tablet-portrait-only-square);
+    grid-gap: $tablet-portrait-only-square-gutter;
+    margin: 0 $tablet-portrait-only-square-gutter;
+  }
+  .square {
+    height: $tablet-portrait-only-square;
+    width: $tablet-portrait-only-square;
+    font-size: $tablet-portrait-only-x-font-size;
+  }
+  h1 { font-size: $tablet-portrait-only-large-text; }
+  #rules {
+    font-size: $tablet-portrait-only-medium-text;
+  }
+}
+/* tablet-landscape-only */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  #game-area{
+    margin: 0 $tablet-landscape-only-board-margin;
+    grid-template-columns: repeat(3, $tablet-landscape-only-game-board);
+  }
+  .game-grid {
+    grid-template-columns: repeat(3, $tablet-landscape-only-square);
+    grid-gap: $tablet-landscape-only-square-gutter;
+    margin: 0 $tablet-landscape-only-square-gutter;
+  }
+  .square {
+    height: $tablet-landscape-only-square;
+    width: $tablet-landscape-only-square;
+    font-size: $tablet-landscape-only-x-font-size;
+  }
+  h1 { font-size: $tablet-landscape-only-large-text; }
+  #rules {
+    font-size: $tablet-landscape-only-medium-text;
+  }
+}
+/* desktop-only */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+  #game-area{
+    // grid-gap: $desktop-only-board-gutter;
+    // margin: 0 $desktop-only-board-gutter;
+    grid-template-columns: repeat(3, $desktop-only-game-board);
+    margin: 0 $desktop-only-board-margin;
+  }
+  .game-grid {
+    grid-template-columns: repeat(3, $desktop-only-square);
+    grid-gap: $desktop-only-square-gutter;
+    // margin: 0 $desktop-only-square-gutter;
+  }
+  .square {
+    height: $desktop-only-square;
+    width: $desktop-only-square;
+    font-size: $desktop-only-x-font-size;
+  }
+  h1 { font-size: $desktop-only-large-text; }
+  #rules {
+    font-size: $desktop-only-medium-text;
+  }
+} 
+/* big-desktop-up */
+@media (min-width: 1800px) {
+  #game-area{
+    grid-template-columns: repeat(3, $big-desktop-up-game-board);
+    margin: 0 $big-desktop-up-game-board-margin;
+  }
+  .game-grid {
+    grid-template-columns: repeat(3, $big-desktop-up-square);
+    grid-gap: $big-desktop-up-square-gutter;
+  }
+  .square {
+    height: $big-desktop-up-square;
+    width: $big-desktop-up-square;
+    font-size: $big-desktop-up-x-font-size;
+  }
+  h1 { font-size: $big-desktop-up-large-text; }
+  #rules {
+    font-size: $big-desktop-up-medium-text;
+  }
+}
