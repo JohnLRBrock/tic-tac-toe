@@ -244,7 +244,10 @@ footer a:hover {
     font-size: $big-desktop-up-x-font-size;
   }
   h1 { font-size: $big-desktop-up-large-text; }
-  #rules { font-size: $big-desktop-up-medium-text; }
+  #rules {
+    font-size: $big-desktop-up-medium-text;
+    width: 67%;
+  }
   #turn-indicator {
     font-size: $big-desktop-up-large-text / 1.5;
     height: 100px;
