@@ -169,7 +169,7 @@ footer a:hover {
     width: 85%; }
 
   #turn-indicator {
-    font-size: 26.6666666667px;
+    font-size: 26.66667px;
     line-height: 40px;
     height: 40px; }
 
@@ -258,7 +258,7 @@ footer a:hover {
     font-size: 23px; }
 
   #turn-indicator {
-    font-size: 66.6666666667px;
+    font-size: 66.66667px;
     height: 100px;
     line-height: 100px; }
 
@@ -284,10 +284,11 @@ footer a:hover {
     font-size: 100px; }
 
   #rules {
-    font-size: 35px; }
+    font-size: 35px;
+    width: 67%; }
 
   #turn-indicator {
-    font-size: 66.6666666667px;
+    font-size: 66.66667px;
     height: 100px;
     line-height: 100px; }
 

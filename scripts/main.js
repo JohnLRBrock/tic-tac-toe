@@ -81,7 +81,7 @@ function Game() {
     if (this.currentPlayer === 'player1') {
       $('#turn-indicator').html("First Player's Turn");
     } else {
-      $('#turn-indicator').html("Second Player's Turn");      
+      $('#turn-indicator').html("Second Player's Turn");
     }
   };
   this.makeMove = function makeGameMove(board, square) {
