@@ -6,7 +6,6 @@
 $background-color: $light-blue;
 $grid-color: $neutral;
 $player1: $mid-blue;
-$player2: $red;
 $text: $dark-blue;
 
 /* Add Sizing Variables */
@@ -58,8 +57,8 @@ h1 {
 }
 
 .square:hover {
-  -webkit-transition: filter .1s ease;
-  transition: filter .1s ease;
+  -webkit-transition: filter .1s;
+  transition: filter .1s;
   -webkit-filter: opacity(.2);
   filter: opacity(.2);
 }
@@ -86,6 +85,8 @@ $grayscale: 40%;
   filter: brightness($brightness) grayscale($grayscale);
   .square { cursor: default; }
   .square:hover {
+  -webkit-transition: none;
+  transition: none;
   -webkit-filter: opacity(1);
   filter: opacity(1); }
 }
