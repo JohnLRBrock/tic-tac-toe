@@ -1,4 +1,4 @@
-An implementation of three board, x only, tic tac toe with Misère rules.
+An implementation of three board, x only, tic tac toe with Misère rules built with JavaScript and JQuery.
 
 At the start of the game players can play an x at any location on the three boards.
 
